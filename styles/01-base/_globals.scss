@@ -1,0 +1,81 @@
+:root {
+  background-color: $light-grey;
+}
+
+body {
+  padding-bottom: 150px;
+}
+
+// Margins
+
+hr {
+  max-width: 400px;
+  margin: 0 auto 30px;
+  border-top: 1px solid $dark-blue;
+}
+
+// Typography
+
+h1,
+h2,
+h3,
+h6,
+p,
+form,
+input,
+textarea,
+label,
+a {
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+h1 {
+  margin-block-end: 21px;
+  font-size: 40px;
+  font-weight: 900;
+  color: $white;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 900;
+  color: $primary-font;
+  text-align: center;
+}
+
+h3 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 900;
+  color: $primary-font;
+}
+
+h6 {
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: 900;
+  color: $primary-font;
+}
+
+p,
+input,
+textarea,
+select,
+label,
+a,
+::placeholder {
+  font-size: 14px;
+  line-height: 20px;
+  color: $primary-font;
+}
+
+input,
+select,
+textarea {
+  border-radius: 6px;
+  border: 1px solid $light-blue;
+}

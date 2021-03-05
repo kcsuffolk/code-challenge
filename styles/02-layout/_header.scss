@@ -1,0 +1,14 @@
+header {
+  height: 600px;
+  padding-top: 150px;
+  background-image: url(/assets/hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  #kicker {
+    max-width: 500px;
+    margin: auto;
+    color: $white;
+  }
+}

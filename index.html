@@ -1,0 +1,136 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.scss" />
+    <title>Code Challenge | Baker Street</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Code Challenge</h1>
+      <p id="kicker">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam
+      </p>
+    </header>
+
+    <main>
+      <div class="products-card">
+        <h2>Products</h2>
+        <hr />
+        <div class="products-list">
+          <div class="product">
+            <input type="checkbox" checked class="product-selection" value="product-1" />
+            <img src="assets/product-image.png" alt="product image" />
+            <div class="product-description">
+              <h6>Lorem Ipsum sit dolor</h6>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam.
+              </p>
+            </div>
+          </div>
+          <div class="product">
+            <input type="checkbox" class="product-selection" value="product-2" />
+
+            <img src="assets/product-image.png" alt="product image" />
+            <div class="product-description">
+              <h6>Lorem Ipsum sit dolor</h6>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam.
+              </p>
+            </div>
+          </div>
+          <div class="product">
+            <input type="checkbox" class="product-selection" value="product-3" />
+
+            <img src="assets/product-image.png" alt="product image" />
+            <div class="product-description">
+              <h6>Lorem Ipsum sit dolor</h6>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam.
+              </p>
+            </div>
+          </div>
+          <div class="personal-package">
+            <input type="checkbox" class="product-selection" value="package" />
+
+            <img
+              id="gift-icon"
+              src="assets/gift-icon.svg"
+              alt="product image"
+            />
+            <p>I would like a <strong>personal Packaging</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact">
+        <h2>Kontakt</h2>
+        <hr />
+
+        <form class="contact-form">
+          <select name="salutation" id="gender-select">
+            <option value="" disabled selected>Salutation</option>
+            <option value="male">Mr.</option>
+            <option value="femalde">Mrs.</option>
+          </select>
+
+          <input type="text" id="first-name" placeholder="First Name" />
+          <input type="text" id="last-name" placeholder="Last Name" />
+          <textarea id="message" placeholder="Message"></textarea>
+        </form>
+
+        <div class="terms-container">
+          <input type="checkbox" id="terms" value="selected" />
+          <label for="terms"
+            >I've read the <a href="#">Terms & Conditions</a> and accept
+            them.</label
+          >
+        </div>
+        <br />
+
+        <div class="btn-container">
+          <button onclick="toggleConfirmation()" id="submit-button">
+            <span class="text">Send Information</span>
+            <div class="icon-container">
+              <div class="icon icon--right">
+                <!-- <svg>
+                  <use xlink:href="#arrow-right"></use>
+                </svg> -->
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div onClick="toggleConfirmation()" id="confirmation-message" class="confirmation hide">
+        <div class="confirmation-card">
+            <img id="success-icon" src="assets/success-icon.svg" alt="success"/>
+          <h3>Thank you!</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+          </p>
+        </div>
+      </div>
+    </main>
+    <script>
+        const toggleConfirmation = () => {
+            const displayConfirmation = document.querySelector("#confirmation-message");
+            displayConfirmation.classList.toggle("hide");
+        }
+    </script>
+  </body>
+</html>

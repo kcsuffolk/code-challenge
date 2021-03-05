@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  background-color: #fafafa;
+}
+
+body {
+  padding-bottom: 150px;
+}
+
+hr {
+  max-width: 400px;
+  margin: 0 auto 30px;
+  border-top: 1px solid #263276;
+}
+
+h1,
+h2,
+h3,
+h6,
+p,
+form,
+input,
+textarea,
+label,
+a {
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  margin-block-end: 21px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 900;
+  color: #263276;
+  text-align: center;
+}
+
+h3 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 900;
+  color: #263276;
+}
+
+h6 {
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #263276;
+}
+
+p,
+input,
+textarea,
+select,
+label,
+a,
+::placeholder {
+  font-size: 14px;
+  line-height: 20px;
+  color: #263276;
+}
+
+input,
+select,
+textarea {
+  border-radius: 6px;
+  border: 1px solid rgba(38, 50, 118, 0.5);
+}
+
+header {
+  height: 600px;
+  padding-top: 150px;
+  background-image: url(hero.076a966a.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+header #kicker {
+  max-width: 500px;
+  margin: auto;
+  color: #fff;
+}
+
+.products-card {
+  width: 986px;
+  padding: 60px 93px;
+  border-radius: 10px;
+  position: absolute;
+  top: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px -70px 40px -50px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(to bottom, #fff, #fafafa);
+}
+
+.products-list {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 10px;
+}
+
+.product {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.product img {
+  width: 90px;
+  margin: 0 50px;
+}
+.product .product-description {
+  max-width: 514px;
+}
+.product input[type=checkbox] {
+  width: 30px;
+  height: 30px;
+}
+
+.personal-package {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #263276;
+}
+.personal-package input[type=checkbox] {
+  width: 30px;
+  height: 30px;
+}
+.personal-package #gift-icon {
+  width: 30px;
+  margin: 0 80px;
+}
+.personal-package p {
+  color: #fff;
+}
+
+.contact {
+  width: 515px;
+  margin: 458px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form select,
+.contact-form input {
+  margin-block-end: 10px;
+  padding: 21px 30px;
+}
+.contact-form textarea {
+  margin-block-end: 30px;
+  padding: 21px 30px;
+}
+
+.terms-container {
+  display: flex;
+  align-items: center;
+}
+.terms-container label {
+  margin-left: 20px;
+}
+.terms-container input[type=checkbox] {
+  width: 30px;
+  height: 30px;
+}
+
+.btn-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+}
+.btn-container:nth-child(1) {
+  --btn-bg: #da0000;
+  --bg: #f22c3a;
+}
+.btn-container:nth-child(2) {
+  --btn-bg: #fac300;
+  --bg: #fc6100;
+}
+
+button {
+  width: 234px;
+  height: 40px;
+  border: 0;
+  position: relative;
+  min-width: var(--width);
+  min-height: var(--height);
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  background: #263276;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+}
+button .text,
+button .icon-container {
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+}
+button .icon-container {
+  --icon-size: 25px;
+  position: relative;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  margin-left: 15px;
+  transition: transform 500ms ease;
+}
+button .icon-container .icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  transition: transform 500ms ease, opacity 250ms ease;
+}
+button .icon-container .icon--left {
+  transform: translateX(-200%);
+  opacity: 0;
+}
+button .icon-container .icon svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--btn-bg);
+  border-radius: var(--height);
+  z-index: 1;
+  transition: transform 500ms ease;
+}
+button:hover::after {
+  transform: translateX(65%);
+}
+button:hover .icon-container {
+  transform: translateX(125%);
+}
+button:hover .icon-container .icon--left {
+  transform: translateX(0);
+  opacity: 1;
+}
+button:hover .icon-container .icon--right {
+  transform: translateX(200%);
+  opacity: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.confirmation {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  backdrop-filter: blur(13px);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.confirmation .confirmation-card {
+  position: relative;
+  top: 415px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 840px;
+  height: 400px;
+  padding: 100px 170px 80px;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+  z-index: 20;
+}
+.confirmation .confirmation-card #success-icon {
+  margin-bottom: 36px;
+}
+/*# sourceMappingURL=styles.319529b4.css.map */
